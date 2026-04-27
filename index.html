@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="反差匿名问卷 - 完全匿名在线调查问卷。请放心填写您的真实想法和反馈，我们不会收集任何个人信息。">
+    <meta name="keywords" content="反差匿名问卷,匿名问卷,在线调查,匿名反馈,真实想法">
+    <meta name="robots" content="index,follow">
     <title>反差匿名问卷</title>
     <style>
         body {
@@ -23,47 +26,57 @@
         h1 {
             text-align: center;
             color: #0078d4;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-size: 32px;
         }
         .desc {
             text-align: center;
-            color: #555;
+            color: #333;
             font-size: 18px;
-            margin-bottom: 35px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .notice {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 15px;
         }
         iframe {
             width: 100%;
-            height: 1050px;
+            height: 1150px;
             border: none;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
-        /* 移动端优化 */
         @media (max-width: 768px) {
-            .container {
-                margin: 15px auto;
-                padding: 20px 15px;
-            }
-            iframe {
-                height: 1350px;
-            }
-            h1 {
-                font-size: 26px;
-            }
+            iframe { height: 1450px; }
+            h1 { font-size: 26px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>反差匿名问卷</h1>
-        <p class="desc">本问卷完全匿名填写，请放心作答。感谢您的参与！</p>
         
-        <!-- 你的 Microsoft Forms 已嵌入 -->
+        <p class="desc">
+            这是一份完全匿名的问卷调查。<br>
+            您可以放心填写最真实的想法、感受和意见，我们不会收集任何个人信息，也不会关联您的身份。<br><br>
+            您的反馈对我们非常重要，每一份认真作答都能帮助我们更好地了解情况。<br>
+            感谢您的参与！
+        </p>
+
+        <div class="notice">
+            ⚠️ 本问卷通过 Microsoft Forms 安全收集，所有数据仅用于匿名统计分析。
+        </div>
+
+        <!-- 你的 Microsoft Forms 问卷 -->
         <iframe 
-            width="640px" 
-            height="480px" 
             src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__lZMstRURFRGOVRCVjdYRjU0NzY4SzY5WDFUWjdaMy4u&embed=true" 
+            width="100%" 
+            height="1150" 
             frameborder="0" 
             marginwidth="0" 
             marginheight="0" 
