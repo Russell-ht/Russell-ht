@@ -1,10 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="msvalidate.01" content="1D8FA88226595E20BEF5F26AF546A1C1" />
-<title>Bing Verify</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反差匿名问卷</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1080px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+        }
+        h1 {
+            text-align: center;
+            color: #0078d4;
+            margin-bottom: 8px;
+            font-size: 32px;
+        }
+        .desc {
+            text-align: center;
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+        iframe {
+            width: 100%;
+            height: 1050px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        /* 移动端优化 */
+        @media (max-width: 768px) {
+            .container {
+                margin: 15px auto;
+                padding: 20px 15px;
+            }
+            iframe {
+                height: 1350px;
+            }
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>反差匿名问卷</h1>
+        <p class="desc">本问卷完全匿名填写，请放心作答。感谢您的参与！</p>
+        
+        <!-- 你的 Microsoft Forms 已嵌入 -->
+        <iframe 
+            width="640px" 
+            height="480px" 
+            src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__lZMstRURFRGOVRCVjdYRjU0NzY4SzY5WDFUWjdaMy4u&embed=true" 
+            frameborder="0" 
+            marginwidth="0" 
+            marginheight="0" 
+            style="border: none; max-width:100%; max-height:100vh" 
+            allowfullscreen 
+            webkitallowfullscreen 
+            mozallowfullscreen 
+            msallowfullscreen>
+        </iframe>
+    </div>
 </body>
 </html>
