@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO CORE ===== -->
+  <title>问卷调查收集 | 母狗调查 / 反差系调查 / 综合问卷 - Russell HT</title>
+  <meta name="description" content="Russell HT 发起的系列问卷调查，包括母狗调查问卷、反差系问卷第二期、综合调查问卷，欢迎参与填写，感谢支持！" />
+  <meta name="keywords" content="母狗调查,反差系问卷,Russell HT,问卷调查,在线问卷,form问卷,反差系,母狗,调查表,网络问卷" />
+  <meta name="author" content="Russell HT" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://russell-ht.github.io/Russell-ht/" />
+
+  <!-- ===== BING / OPEN GRAPH ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="问卷调查收集 | 母狗调查 / 反差系调查 - Russell HT" />
+  <meta property="og:description" content="参与 Russell HT 发起的多项调查问卷，包括母狗调查、反差系第二期等，点击卡片即可填写。" />
+  <meta property="og:url" content="https://russell-ht.github.io/Russell-ht/" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="问卷调查收集 - Russell HT" />
+  <meta name="twitter:description" content="母狗调查、反差系调查问卷等，欢迎参与填写。" />
+
+  <!-- ===== JSON-LD STRUCTURED DATA (关键：帮助 Bing 理解内容) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Russell HT 问卷调查汇总",
+    "description": "Russell HT 发起的系列问卷调查，包括母狗调查问卷、反差系问卷第二期、综合调查问卷。",
+    "url": "https://russell-ht.github.io/Russell-ht/",
+    "author": {
+      "@type": "Person",
+      "name": "Russell HT"
+    },
+    "hasPart": [
+      {
+        "@type": "WebPage",
+        "name": "母狗调查问卷",
+        "url": "https://russell-ht.github.io/Russell-ht/mudog.html",
+        "description": "关于母狗主题的在线调查问卷，由 Russell HT 发起，欢迎参与填写。"
+      },
+      {
+        "@type": "WebPage",
+        "name": "Russell HT 综合问卷",
+        "url": "https://russell-ht.github.io/Russell-ht/",
+        "description": "Russell HT 综合调查问卷主页。"
+      },
+      {
+        "@type": "WebPage",
+        "name": "反差系调查问卷第二期",
+        "url": "https://russell-ht.github.io/Russell-ht/fanchaxi2.html",
+        "description": "反差系调查问卷第二期，欢迎参与，感谢支持。"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0e0c0a;
+      --surface: #191612;
+      --card: #201c18;
+      --border: #2e2820;
+      --accent: #d4963a;
+      --accent-dim: #a06e22;
+      --accent-glow: rgba(212, 150, 58, 0.18);
+      --text-primary: #f0e8d8;
+      --text-secondary: #9a8c78;
+      --text-muted: #5a5244;
+      --serif: 'Noto Serif SC', serif;
+      --sans: 'Noto Sans SC', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-primary);
+      font-family: var(--sans);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* ---- Background texture ---- */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(212,150,58,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 80% 90%, rgba(160,80,20,0.05) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ---- Noise grain overlay ---- */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      pointer-events: none;
+      opacity: 0.6;
+      z-index: 0;
+    }
+
+    /* ---- Layout wrapper ---- */
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ---- Header ---- */
+    header {
+      padding: 72px 0 56px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header-badge {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent-dim);
+      padding: 5px 16px;
+      border-radius: 2px;
+      margin-bottom: 28px;
+      background: rgba(212,150,58,0.06);
+    }
+
+    header h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+    }
+
+    header h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    header p.subtitle {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      max-width: 520px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    .header-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 40px 0 0;
+    }
+
+    .header-divider::before,
+    .header-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border), transparent);
+    }
+
+    .header-divider span {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    /* ---- Section label ---- */
+    .section-label {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ---- Survey Cards ---- */
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 64px;
+    }
+
+    .card {
+      position: relative;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeSlideUp 0.6s ease both;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.22s; }
+    .card:nth-child(3) { animation-delay: 0.34s; }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card:hover {
+      border-color: var(--accent-dim);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(212,150,58,0.1);
+    }
+
+    /* Left accent stripe */
+    .card-stripe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent-dim));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .card-stripe { opacity: 1; }
+
+    /* Glow on hover */
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 30% 50%, var(--accent-glow), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .card:hover::before { opacity: 1; }
+
+    .card-inner {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 28px 32px;
+    }
+
+    /* Number badge */
+    .card-num {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent);
+      background: rgba(212,150,58,0.05);
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card:hover .card-num {
+      background: rgba(212,150,58,0.12);
+      border-color: var(--accent-dim);
+    }
+
+    .card-text { flex: 1; min-width: 0; }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .card-desc {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* Arrow icon */
+    .card-arrow {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .card:hover .card-arrow {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateX(4px);
+    }
+
+    .card-arrow svg {
+      fill: none;
+      stroke: var(--text-muted);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.3s ease;
+    }
+
+    .card:hover .card-arrow svg { stroke: #0e0c0a; }
+
+    /* ---- SEO content section (visible text for crawlers) ---- */
+    .seo-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 36px 40px;
+      margin-bottom: 40px;
+      animation: fadeSlideUp 0.6s ease 0.5s both;
+    }
+
+    .seo-section h2 {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 14px;
+    }
+
+    .seo-section p {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      font-weight: 300;
+    }
+
+    .seo-section p:last-child { margin-bottom: 0; }
+
+    .keyword-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .keyword-list span {
+      font-size: 12px;
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--text-muted);
+      background: var(--card);
+      letter-spacing: 0.05em;
+    }
+
+    /* ---- Tips Panel ---- */
+    .tips {
+      background: rgba(212,150,58,0.06);
+      border: 1px solid rgba(212,150,58,0.2);
+      border-radius: 4px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      animation: fadeSlideUp 0.6s ease 0.62s both;
+    }
+
+    .tips h3 {
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .tips ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .tips ul li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      padding-left: 20px;
+      position: relative;
+      font-weight: 300;
+    }
+
+    .tips ul li::before {
+      content: '-';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      text-align: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    footer p {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    footer a {
+      color: var(--accent-dim);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--accent); }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 580px) {
+      header { padding: 48px 0 36px; }
+      .card-inner { padding: 22px 20px; gap: 16px; }
+      .card-num { width: 38px; height: 38px; font-size: 18px; }
+      .card-title { font-size: 17px; }
+      .seo-section { padding: 24px 20px; }
+      .card-arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-badge">Russell HT · 问卷调查</div>
+    <h1>参与调查<br/><em>分享你的看法</em></h1>
+    <p class="subtitle">
+      以下是 Russell HT 发起的系列在线问卷，涵盖母狗调查、反差系调查等主题，
+      点击任意问卷卡片即可跳转填写，感谢你的参与与支持。
+    </p>
+    <div class="header-divider"><span>共 3 份问卷</span></div>
+  </header>
+
+  <!-- ===== CARDS ===== -->
+  <div class="section-label">在线问卷列表</div>
+
+  <main>
+    <div class="cards">
+
+      <!-- Card 1 -->
+      <a
+        href="https://russell-ht.github.io/Russell-ht/mudog.html"
+        target="_blank"
+        rel="noopener"
+        class="card"
+        aria-label="母狗调查问卷"
+      >
+        <div class="card-stripe"></div>
+        <div class="card-inner">
+          <div class="card-num">01</div>
+          <div class="card-text">
+            <div class="card-tag">调查问卷 / Survey</div>
+            <div class="card-title">母狗调查问卷</div>
+            <div class="card-desc">
+              关于母狗主题的在线调查问卷，由 Russell HT 发起，
+              欢迎参与填写，你的每一个回答都是宝贵的数据。
+            </div>
+          </div>
+          <div class="card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a
+        href="https://russell-ht.github.io/Russell-ht/"
+        target="_blank"
+        rel="noopener"
+        class="card"
+        aria-label="Russell HT 综合调查问卷"
+      >
+        <div class="card-stripe"></div>
+        <div class="card-inner">
+          <div class="card-num">02</div>
+          <div class="card-text">
+            <div class="card-tag">综合问卷 / General</div>
+            <div class="card-title">Russell HT 综合调查问卷</div>
+            <div class="card-desc">
+              Russell HT 综合调查问卷主页，包含多项调查内容，
+              欢迎浏览并参与其中感兴趣的问卷填写。
+            </div>
+          </div>
+          <div class="card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a
+        href="https://russell-ht.github.io/Russell-ht/fanchaxi2.html"
+        target="_blank"
+        rel="noopener"
+        class="card"
+        aria-label="反差系调查问卷第二期"
+      >
+        <div class="card-stripe"></div>
+        <div class="card-inner">
+          <div class="card-num">03</div>
+          <div class="card-text">
+            <div class="card-tag">专项问卷 / Special</div>
+            <div class="card-title">反差系调查问卷 第二期</div>
+            <div class="card-desc">
+              反差系调查问卷第二期正式上线，延续第一期的话题，
+              深入探讨更多维度，期待你的参与和真实作答。
+            </div>
+          </div>
+          <div class="card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ===== SEO RICH TEXT (搜索引擎爬取的关键正文) ===== -->
+    <div class="section-label">关于本次调查</div>
+
+    <section class="seo-section">
+      <h2>母狗调查 &amp; 反差系问卷 — 由 Russell HT 发起</h2>
+      <p>
+        本页面汇集了 Russell HT 发起的多份在线调查问卷，主要涵盖<strong>母狗调查问卷</strong>与<strong>反差系调查问卷第二期</strong>两大主题，
+        同时附有综合调查主页入口。所有问卷均通过 GitHub Pages 托管，安全可靠，欢迎广泛传播与参与。
+      </p>
+      <p>
+        如果你对母狗相关话题、反差系话题有兴趣，或者想为 Russell HT 的研究贡献数据，
+        请点击上方对应的问卷卡片，跳转后即可在线填写，全程匿名，感谢你的支持。
+      </p>
+      <p>
+        本调查面向所有感兴趣的网络用户开放，无需注册账号，直接填写提交即可。
+        问卷数据仅用于统计分析，不涉及任何个人隐私信息收集。
+      </p>
+      <div class="keyword-list">
+        <span>母狗调查</span>
+        <span>反差系问卷</span>
+        <span>反差系调查</span>
+        <span>Russell HT</span>
+        <span>在线问卷</span>
+        <span>网络调查</span>
+        <span>母狗问卷</span>
+        <span>反差系第二期</span>
+        <span>匿名问卷</span>
+        <span>问卷填写</span>
+      </div>
+    </section>
+
+    <!-- ===== FILL TIPS ===== -->
+    <div class="tips">
+      <h3>填写须知</h3>
+      <ul>
+        <li>点击上方任意问卷卡片即可在新标签页中打开对应问卷</li>
+        <li>所有问卷均为匿名填写，不收集个人身份信息</li>
+        <li>填写完成后请务必点击提交按钮以确保数据有效</li>
+        <li>如有多份问卷感兴趣，欢迎逐一参与，每份问卷独立填写</li>
+        <li>问卷链接如失效请稍后重试或联系 Russell HT</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>
+      &copy; 2025 Russell HT &nbsp;|&nbsp;
+      <a href="https://russell-ht.github.io/Russell-ht/" target="_blank" rel="noopener">russell-ht.github.io</a>
+      &nbsp;|&nbsp; 感谢参与调查
+    </p>
+  </footer>
+
+</div>
+
+</body>
+</html>
