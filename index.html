@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反差匿名小问卷</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", system-ui, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #4b0082, #8b008b);
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #ff1493, #8b0000);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .header h1 { margin: 0; font-size: 34px; }
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .content {
+            padding: 40px;
+        }
+        .question {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        .q-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #8b008b;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 17px;
+            cursor: pointer;
+        }
+        textarea, input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+        button {
+            background: #ff1493;
+            color: white;
+            border: none;
+            padding: 18px 60px;
+            font-size: 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            display: block;
+            margin: 60px auto 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>反差匿名小问卷</h1>
+            <p>完全匿名 · 放心作答</p>
+        </div>
+
+        <div class="warning">
+            问题变态程度依次递增，可只答部分或跳过。若生理不适及未成年请及时退出。
+        </div>
+
+        <div class="content">
+            <form id="surveyForm">
+
+                <div class="question">
+                    <div class="q-title">1. 了解 / 跳过 / 退出</div>
+                    <label><input type="radio" name="q1" value="了解"> 了解</label>
+                    <label><input type="radio" name="q1" value="跳过"> 跳过</label>
+                    <label><input type="radio" name="q1" value="退出"> 退出</label>
+                </div>
+
+                <div class="question">
+                    <div class="q-title">2. 是否希望陌生人看自己的脸/身体？</div>
+                    <label><input type="radio" name="q2" value="是"> 是</label>
+                    <label><input type="radio" name="q2" value="否"> 否</label>
+                </div>
+
+                <div class="question">
+                    <div class="q-title">3. 是否希望成为别人的性幻想对象？</div>
+                    <label><input type="radio" name="q3" value="希望"> 希望</label>
+                    <label><input type="radio" name="q3" value="无所谓"> 无所谓</label>
+                    <label><input type="radio" name="q3" value="恶心"> 恶心</label>
+                </div>
+
+                <div class="question">
+                    <div class="q-title">4. 想尝试或可以接受的着衣程度</div>
+                    <label><input type="radio" name="q4" value="幻想"> 只敢在幻想或不穿出门的情况穿性感衣服</label>
+                    <label><input type="radio" name="q4" value="短裙"> 可以穿露出半个大腿的短裙/短裤</label>
+                    <label><input type="radio" name="q4" value="低胸"> 低胸乳肉露出超过60%</label>
+                    <label><input type="radio" name="q4" value="真空"> 真空无内出门经历</label>
+                    <label><input type="radio" name="q4" value="拍摄"> 拍摄过擦边/露点照片</label>
+                </div>
+
+                <div class="question">
+                    <div class="q-title">5. 希望对自己的人格M程度有更深的认识</div>
+                    <label><input type="radio" name="q5" value="渴望暴露"> 渴望和陌生人暴露一些自己</label>
+                    <label><input type="radio" name="q5" value="刺激"> 填淫秽问卷会感到刺激</label>
+                    <label><input type="radio" name="q5" value="无意识"> 无意识点进来</label>
+                    <label><input type="radio" name="q5" value="羞辱"> 希望有人羞辱自己</label>
+                </div>
+
+                <div class="question">
+                    <div class="q-title">6. 幻想（多项选择）</div>
+                    <label><input type="checkbox" name="q6" value="亲密"> 幻想过某个男性与自己的亲密行为</label>
+                    <label><input type="checkbox" name="q6" value="性器"> 夹腿/自慰时渴望男人性器</label>
+                    <label><input type="checkbox" name="q6" value="文爱"> 渴望过文爱剧情或言语羞辱</label>
+                    <label><input type="checkbox" name="q6" value="调教"> 幻想过拥有主人调教自己</label>
+                </div>
+
+                <div class="question">
+                    <div class="q-title">7. 这是一个树洞项，说一个秘密</div>
+                    <textarea name="q7" rows="5" placeholder="在这里输入你的秘密..."></textarea>
+                </div>
+
+                <!-- 新增下一批题目 -->
+                <div class="question">
+                    <div class="q-title">8. 给自己的反差评分（1-10分）</div>
+                    <input type="number" name="q8" min="1" max="10" placeholder="输入1-10的分数">
+                </div>
+
+                <div class="question">
+                    <div class="q-title">11. 如果在保证绝对安全且无任何后患的情况下，是否能接受被当成母狗肆意使用调教？</div>
+                    <label><input type="radio" name="q11" value="是"> 是</label>
+                    <label><input type="radio" name="q11" value="否"> 否</label>
+                </div>
+
+                <div class="question">
+                    <div class="q-title">12. 一个可选择的任务（可多选）</div>
+                    <label><input type="checkbox" name="q12" value="揉乳头"> 开始揉乳头</label>
+                    <label><input type="checkbox" name="q12" value="揉阴蒂"> 开始揉阴蒂</label>
+                    <label><input type="checkbox" name="q12" value="呻吟"> 微微呻吟出声</label>
+                    <label><input type="checkbox" name="q12" value="拍照"> 掀起衣服拍一张露点照片记录</label>
+                </div>
+
+                <button type="submit">提交问卷（完全匿名）</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ 问卷已提交！\n感谢你的真实作答，所有内容仅本地保存。');
+        });
+    </script>
+</body>
+</html>
