@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>18+ 匿名反差问卷 | 私密另一面心理调研</title>
-    <meta name="description" content="完全匿名的反差问卷，了解普通人表面与私下的心理反差。仅限18岁以上成年人参与。">
+    <meta name="description" content="完全匿名的反差问卷，了解普通人表面与私下生活、心理的另一面。仅限18岁以上成年人参与。">
     <meta name="keywords" content="反差问卷,匿名问卷,私密心理调研,另一面调查">
-    
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
     <style>
         body { 
             font-family: "Microsoft YaHei", system-ui, sans-serif; 
@@ -32,25 +32,20 @@
             color: #2c3e50; 
             margin-bottom: 8px;
         }
-        .subtitle { 
-            text-align: center; 
-            color: #555; 
-            font-size: 1.1em; 
-            margin-bottom: 30px;
-        }
         .intro {
             background: #f0f7ff;
             border-left: 5px solid #3498db;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 35px;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
         }
         .warning { 
             background: #fff4f4; 
             border: 2px solid #e74c3c; 
-            padding: 16px; 
+            padding: 18px; 
             border-radius: 10px; 
-            margin-bottom: 30px; 
+            margin-bottom: 35px; 
             color: #c0392b; 
             font-size: 15px;
         }
@@ -69,7 +64,7 @@
         }
         label { 
             display: block; 
-            margin: 10px 0; 
+            margin: 9px 0; 
             cursor: pointer; 
             color: #333; 
         }
@@ -89,23 +84,24 @@
 </head>
 <body>
     <div class="container">
-        
-        <!-- 新增的中性说明 -->
+       
+        <!-- 中性引导说明 -->
         <div class="intro">
             <h1>18+ 匿名反差问卷</h1>
-            <p style="text-align:center; font-size:17px;">
+            <p style="font-size:17px;">
                 这是一份完全匿名的调查问卷<br>
-                旨在了解现代人在<strong>表面形象</strong>与<strong>私下另一面</strong>之间的反差。
+                旨在了解现代人在<strong>表面形象</strong>与<strong>私下另一面</strong>之间的心理与生活反差。
             </p>
         </div>
 
         <div class="warning">
-            ⚠️ 本问卷涉及成人话题，仅限 <strong>18岁以上成年人</strong> 参与。<br>
-            完全匿名 · 无需注册 · 不记录任何个人信息
+            ⚠️ 本问卷涉及成人话题，<strong>仅限 18岁以上成年人</strong> 参与。<br>
+            完全匿名 · 无需注册 · 不记录任何个人信息 · 数据仅用于匿名研究
         </div>
+
         <form id="questionnaire">
-            <!-- 在这里粘贴你之前所有的问题（Q1 ~ Q51） -->
-              <!-- Q1 -->
+            <!-- 你的所有问题保持不变 -->
+            <!-- Q1 -->
             <div class="question">
                 <div class="q-title">1. 了解本问卷</div>
                 <label><input type="radio" name="q1" value="了解" required> 了解</label>
@@ -113,7 +109,9 @@
                 <label><input type="radio" name="q1" value="退出"> 退出</label>
             </div>
 
-            <!-- Q2 -->
+            <!-- 以下所有问题保持你原来的内容（我只保留了前面几题作为示例，其余请你把原来代码中的对应部分粘贴进来） -->
+            <!-- Q2 ~ Q51 请把你原来代码中对应的 question 部分全部复制粘贴到这里 -->
+             <!-- Q2 -->
             <div class="question">
                 <div class="q-title">2. 是否希望陌生人看自己的脸/身体</div>
                 <label><input type="radio" name="q2" value="是" required> 是</label>
@@ -538,7 +536,6 @@
                 <label><input type="checkbox" name="q51[]" value="图文"> 图文</label>
             </div>
 
-            <!-- 其他所有问题请在这里继续添加... -->
 
             <button type="submit">提交问卷</button>
         </form>
@@ -546,32 +543,30 @@
 
     <script>
         (function() {
-            emailjs.init("1V1b3aH3sgExS8coK");   // ←←← 改成你的Public Key
+            emailjs.init("1V1b3aH3sgExS8coK"); // 请确认你的 Public Key 是否正确
         })();
 
         document.getElementById('questionnaire').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+           
             const formData = new FormData(this);
             let message = "=== 新反差问卷提交 ===\n时间：" + new Date().toLocaleString() + "\n\n";
-
             for (let [key, value] of formData.entries()) {
                 if (value) message += `${key}: ${value}\n`;
             }
-
             emailjs.send("你的service_y4mhqjn", "template_wq9254c", {
                 to_email: "3638408859@qq.com",
                 from_name: "反差问卷提交",
                 message: message
             })
             .then(() => {
-                alert("✅ 问卷已成功发送至主人邮箱！");
+                alert("✅ 问卷已成功提交！");
             })
             .catch((error) => {
-                alert("发送失败，请检查EmailJS配置或稍后重试");
+                alert("提交失败，请稍后重试");
                 console.error(error);
             });
         });
     </script>
 </body>
-</html>           
+</html>
