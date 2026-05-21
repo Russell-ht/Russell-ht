@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://russell-ht.github.io/Russell-ht/sitemap.xml
+
+User-agent: Bingbot
+Allow: /
